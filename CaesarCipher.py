@@ -1,5 +1,5 @@
 while(True):
-    inp = int(input("\n1.Encrypt\n2.Decrypt\nEnter your choice(1/2) : "))
+    inp = int(input("\n1.Encrypt\n2.Decrypt\n3.Exit\nEnter your choice(1/2/3) : "))
     if inp == 1:
         plainText = input("Enter the message : ")
         safe = plainText.upper().replace(" ","")
@@ -11,7 +11,7 @@ while(True):
                 val %= 26
             enc += chr(val+65)    
         print("The Encrypted Message : "+enc)
-    else:
+    elif inp == 2:
         encryptedText = input("Enter the Encrypted message : ").upper().replace(" ","")
         dec = ""
         key = int(input("Enter the key : "))
@@ -21,3 +21,5 @@ while(True):
                 val += 26
             dec += chr(val+65)
         print("The Message is : "+dec)
+    else:
+        break
