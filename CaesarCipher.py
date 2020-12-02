@@ -1,11 +1,10 @@
 while(True):
     inp = int(input("\n1.Encrypt\n2.Decrypt\n3.Exit\nEnter your choice(1/2/3) : "))
     if inp == 1:
-        plainText = input("Enter the message : ")
-        safe = plainText.upper().replace(" ","")
+        plainText = input("Enter the message : ").upper().replace(" ","")
         enc = ""
         key = int(input("Enter the key : "))
-        for i in safe:
+        for i in plainText:
             val = (int(ord(i)-65)+key)
             if val > 25:
                 val %= 26
